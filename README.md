@@ -1,5 +1,5 @@
-Project Title: Parking Reservation System
-Description:
+Project Title: Parking Reservation System\n
+Description:\n
 The Parking Reservation System is a web-based application designed to manage parking space reservations efficiently. This project serves as a comprehensive solution for users looking to reserve parking spots while providing administrators with tools to manage these reservations effectively.
 
 The system features a user-friendly interface for both students and administrators, allowing seamless navigation through various functionalities. Users can easily reserve parking spots by entering their details, including student ID, car ID, and personal information. The application validates inputs to ensure data integrity and prevent errors, providing real-time feedback to the users.
