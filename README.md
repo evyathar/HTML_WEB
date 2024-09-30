@@ -8,6 +8,7 @@ The system features a user-friendly interface for both students and administrato
 
 The application integrates JavaScript for dynamic behavior and interactivity, ensuring that users can view available parking spots instantly. Administrators can monitor parking capacity and manage reservations, enhancing overall operational efficiency. The system also supports light and dark mode themes to cater to user preferences.
 
+
 Key Features:
 
 User Registration and Login: Secure login for students and administrators, allowing access to different functionalities based on user roles.
@@ -21,6 +22,7 @@ Reservation Management: Users can reserve parking spots and receive confirmation
 Accessibility and Usability: Designed with user experience in mind, including keyboard shortcuts for common actions and responsive design for mobile access.
 
 Theme Customization: Users can switch between light and dark modes to enhance visibility and comfort.
+
 
 Technologies Used:
 
