@@ -13,7 +13,8 @@ function IsParkingFull() {
         return false;
     }
 }
-   
+
+//general switch - incr available parking by parkingLot
 function increaseAvailableParking(parkingLot)
 {    
     switch (parkingLot) {
@@ -78,7 +79,6 @@ function FuncDelAll(){
 	for(i=0; i<studentTable.length; i++)
 	{
 		var student = studentTable[i];
-		var delparkingLot = student[4];
 		//delete each student by his id.
 		removeIdFromDb(student[0]);
 	}
@@ -95,9 +95,13 @@ function initializeParkingCounters() {
     counterManager.updateParkingSpots('CParkingSpots', 5);
     counterManager.updateParkingSpots('DParkingSpots', 5);
 }
+
 function FuncShowData() {
-    // Check if the password is the manager password (1234).
+
+    //retrieve the student data from a local database or local storage
     var studentTable = getStudentsDb();
+
+    //This retrieves the HTML element with the ID tableBody
     var tableBody = document.getElementById('tableBody');
     
     // Clear existing table data

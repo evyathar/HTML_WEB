@@ -1,7 +1,6 @@
 //Data base layer
 
       
- 
 let instance; // Global variable to track the single instance
 	
 // using Singleton design patter for counter Manager
@@ -56,6 +55,7 @@ class CounterManager {
 	}
 }
 
+
 // Usage: define Object of Class (CounterManager)
 const counterManager = new CounterManager();
 
@@ -77,8 +77,8 @@ function getStudentsDb() {
     for (var i = 0; i < localStorage.length; i++) {
         var studentId = localStorage.key(i);
         var studentInfo = localStorage.getItem(studentId);
-        var studentData = studentInfo.split('|'); // Split string by the separator
-        students.push(studentData); // Use push to add the studentData array to students
+        var studentData = studentInfo.split('|'); // Split string by the separator to an array 
+        students.push(studentData); // Use push to add the studentData array to the end of students
     }
 	//return the array of the students.
     return students;
@@ -87,33 +87,34 @@ function getStudentsDb() {
 //function to get name of student.
 
 function getName(studentInfo) {
+    //retrieve the name as a sub string from the parameter
 	var nameIndex = studentInfo.indexOf('name')+6;
 	var endNameIndex = studentInfo.indexOf('lastName')-1;
 	return 	studentInfo.substring(nameIndex, endNameIndex);
 }
-//function to get last name of student.
 
+//function to get last name of student.
 function getLastName(studentInfo) {
 	var lastNameIndex = studentInfo.indexOf('lastName')+10;
 	var endLastNameIndex = studentInfo.indexOf('carid')-1;
 	return 	studentInfo.substring(lastNameIndex, endLastNameIndex);
 }
-//function to get car id of student.
 
+//function to get car id of student.
 function getcarid(studentInfo) {
 	var caridIndex = studentInfo.indexOf('carid')+9;
 	var endcaridIndex = studentInfo.indexOf('parkingLot')-1;
 	return 	studentInfo.substring(caridIndex, endcaridIndex);
 }
-//function to get parking area of student.
 
+//function to get parking area of student.
 function getparea(studentInfo) {
 	var pareaIndex = studentInfo.indexOf('parkingLot')+6;
 	var endpareaIndex = studentInfo.indexOf('}')-1;
 	return 	studentInfo.substring(pareaIndex, endpareaIndex);
 }
-//function to delete a student from the local storage.
 
+//function to delete a student from the local storage.
 function removeIdFromDb(studentId) {
 	localStorage.removeItem(studentId);
 }
